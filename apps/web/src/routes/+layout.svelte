@@ -1,5 +1,6 @@
 <script>
     import "../app.pcss";
+    import { getImageURL } from "$lib/utils"
     export let data
 </script>
 <div class="min-h-full">
@@ -15,20 +16,20 @@
                 </div>
             {:else}
             <div class="dropdown dropdown-end mr-4">
-                <a href="/projects/new" class="btn btn-primary btn-outline">Add project</a>
+                <a href="/events/new" class="btn btn-primary btn-outline">Add live event</a>
             </div>
             <div class="dropdown dropdown-end">
                 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                 <!-- svelte-ignore a11y-label-has-associated-control -->
                 <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                     <div class="w-10 rounded-full">
-                        <img src="https://placeimg.com/80/80/people" alt="User avatar" class="">
+                        <img src={data.user?.avatar ? getImageURL(data.user?.collectionId, data.user?.id, data.user?.avatar) : `https://ui-avatars.com/api/?name=${data.user?.name}`} alt="User avatar" class="">
                     </div>
                 </label>
                 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                        <a href="/my/projects" class="justify-between">My projects</a>
+                        <a href="/my/events" class="justify-between">My events</a>
                     </li>
                     <li>
                         <a href="/my/settings">Settings</a>
@@ -43,7 +44,7 @@
             {/if}
         </div>
     </nav>
-    <div class="py-10">
+    <div class="py-4">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <slot></slot>
         </div>
