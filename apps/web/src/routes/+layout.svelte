@@ -15,9 +15,6 @@
                     <a href="/register" class="btn btn-secondary text-white">Register</a>
                 </div>
             {:else}
-            <div class="dropdown dropdown-end mr-4">
-                <a href="/events/new" class="btn btn-primary btn-outline">Add live event</a>
-            </div>
             <div class="dropdown dropdown-end">
                 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                 <!-- svelte-ignore a11y-label-has-associated-control -->
@@ -28,9 +25,6 @@
                 </label>
                 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
                 <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                    <li>
-                        <a href="/my/events" class="justify-between">My events</a>
-                    </li>
                     <li>
                         <a href="/my/settings">Settings</a>
                     </li>
