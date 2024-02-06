@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"node-schedule": "^2.1.1",
 		"pocketbase": "^0.21.1"
 	}
 }

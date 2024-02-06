@@ -25,7 +25,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <div class="grid grid-cols-2 gap-4 mt-4">
+    <div class="grid grid-cols-2 gap-4 mt-4 border-t-2">
         {#each data.events as event}
             <LiveEvent {event}/>
         {/each}
